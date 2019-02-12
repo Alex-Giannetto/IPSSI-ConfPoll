@@ -17,12 +17,12 @@ services:
       PHP_DISPLAY_ERRORS: 1
 
   database:
-    image: mysql:8.0
+    image: mysql:latest
     volumes:
       - ./docker/mysqlconf:/etc/mysql/conf.d
       - ./docker/mysql:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: symfonydemo
+      MYSQL_DATABASE: ConfPoll
       MYSQL_ROOT_PASSWORD: root
 
   phpmyadmin:
